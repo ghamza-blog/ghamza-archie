@@ -17,15 +17,17 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="https://static.ghamza.dev/icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://static.ghamza.dev/icons/favicon-16x16.png">
 	<link rel="manifest" href="https://static.ghamza.dev/icons/site.webmanifest">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M9GYS9Z1XC"></script>
+	
+	{{- if isset .Site.Params "gtag_key" -}}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtag_key }}"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'G-M9GYS9Z1XC');
+		gtag('config', '{{ .Site.Params.gtag_key }}');
 	</script>
+	{{- end -}}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"

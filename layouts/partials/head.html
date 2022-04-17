@@ -1,4 +1,6 @@
-<div class="support-ribbon">🕊️🇵🇸 I stand with humanity, I stand with Palestine 🇵🇸🕊️</div>
+{{- if isset .Site.Params "support_text" -}}
+<div class="support-ribbon">{{ .Site.Params.support_text }}</div>
+{{- end -}}
 <header>
   <div class="main">
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
