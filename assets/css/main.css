@@ -354,6 +354,7 @@ table td {
 support-ribbon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   margin: 1em 0;
 }
