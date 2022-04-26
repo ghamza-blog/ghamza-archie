@@ -29,19 +29,21 @@
 			{{ end }}
 		</div>
 	</article>
+	{{ if .Site.Params.giscus_enabled | default false }}
 	<script src="https://giscus.app/client.js"
-        data-repo="ghamza-blog/ghamza-blog.github.io"
-        data-repo-id="R_kgDOHMIi9w"
-        data-category-id="DIC_kwDOHMIi984COoB4"
-        data-mapping="url"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
+        data-repo="{{ .Site.Params.giscus_data_repo }}"
+        data-repo-id="{{ .Site.Params.giscus_data_repo_id }}"
+        data-category-id="{{ .Site.Params.giscus_data_category_id }}"
+        data-mapping="{{ .Site.Params.giscus_data_mapping }}"
+        data-reactions-enabled="{{ .Site.Params.giscus_data_reactions_enabled }}"
+        data-emit-metadata="{{ .Site.Params.giscus_data_emit_metadata }}"
+        data-input-position="{{ .Site.Params.giscus_data_input_position}}"
+        data-theme="{{ .Site.Params.giscus_data_theme }}"
+        data-lang="{{ .Site.Params.giscus_data_lang }}"
+        data-loading="{{ .Site.Params.giscus_data_loading }}"
+        crossorigin="{{ .Site.Params.giscus_crossorigin }}"
         async>
-</script>
+	</script>
+	{{ end }}
 </main>
 {{ end }}
