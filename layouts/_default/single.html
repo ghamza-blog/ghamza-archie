@@ -29,19 +29,19 @@
 			{{ end }}
 		</div>
 	</article>
-	{{ if .Site.Params.giscus_enabled | default false }}
+	{{ if .Site.Params.giscus.enabled | default false }}
 	<script src="https://giscus.app/client.js"
-        data-repo="{{ .Site.Params.giscus_data_repo }}"
-        data-repo-id="{{ .Site.Params.giscus_data_repo_id }}"
-        data-category-id="{{ .Site.Params.giscus_data_category_id }}"
-        data-mapping="{{ .Site.Params.giscus_data_mapping }}"
-        data-reactions-enabled="{{ .Site.Params.giscus_data_reactions_enabled }}"
-        data-emit-metadata="{{ .Site.Params.giscus_data_emit_metadata }}"
-        data-input-position="{{ .Site.Params.giscus_data_input_position}}"
-        data-theme="{{ .Site.Params.giscus_data_theme }}"
-        data-lang="{{ .Site.Params.giscus_data_lang }}"
-        data-loading="{{ .Site.Params.giscus_data_loading }}"
-        crossorigin="{{ .Site.Params.giscus_crossorigin }}"
+        data-repo="{{ .Site.Params.giscus.data.repo }}"
+        data-repo-id="{{ .Site.Params.giscus.data.repo_id }}"
+        data-category-id="{{ .Site.Params.giscus.data.category_id }}"
+        data-mapping="{{ .Site.Params.giscus.data.mapping }}"
+        data-reactions-enabled="{{ .Site.Params.giscus.data.reactions_enabled }}"
+        data-emit-metadata="{{ .Site.Params.giscus.data.emit_metadata }}"
+        data-input-position="{{ .Site.Params.giscus.data.input_position}}"
+        data-theme="{{ .Site.Params.giscus.data.theme }}"
+        data-lang="{{ .Site.Params.giscus.data.lang }}"
+        data-loading="{{ .Site.Params.giscus.data.loading }}"
+        crossorigin="{{ .Site.Params.giscus.crossorigin }}"
         async>
 	</script>
 	{{ end }}
